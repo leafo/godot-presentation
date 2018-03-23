@@ -51,7 +51,7 @@
 
 class: middle, center
 
-# itch.io @ The GDC Godot Meetup
+# itch.io @ The Godot GDC Meetup
 
 <img src="itchio-logo.png" width="50%" />
 
@@ -63,21 +63,20 @@ March 22, 2018
 
 # Hi
 
+<img style="float: left; margin-right: 1em;" src="leafo.png" alt="" width="15%" />
+
 My name is Leaf Corcoran.
 
-<img src="leafo.png" alt="" />
-
-Places where you might see me:
+<div style="clear:both"></div>
 
 * https://leafo.itch.io
 * https://github.com/leafo
 * https://twitter.com/moonscript
 * https://leafo.net
 
-
 ???
 
-Hello world these are notes
+Here are some places where you might see me on the internet
 
 ---
 
@@ -139,11 +138,54 @@ class: center, middle
 
 class: center, middle
 
+<img src="moonscript.png" style="width: 80%" alt="" />
+
+---
+
+class: center, middle
+
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="ld1.gif" style="display: block; width: 38%" alt="" />
+  <div>
+    <img src="ld2.gif" style="display: inline-block; width: 50%; " alt="" />
+    <img src="ld4.gif" style="display: inline-block; width: 50%; " alt="" />
+    <img src="ld3.gif" style="display: inline-block; width: 45%; " alt="" />
+  </div>
+</div>
+
+---
+
+class: center, middle
+
+<img src="lapis.png" style="width: 80%" alt="" />
+
+---
+
+class: center, middle
+
+<img src="homepage.png" style="width: 100%" alt="" />
+
+---
+
+class: center, middle
+
+<img src="app.png" style="width: 100%" alt="" />
+
+---
+
+class: center, middle
+
 <img src="5years.jpg" style="float: left" alt="" />
 
 # 5 years of itch.io
 
 And we just passed 100k games!
+
+---
+
+class: center, middle
+
+# itch.io & Godot
 
 ---
 
@@ -171,7 +213,7 @@ class: center, middle
 
 # Disclaimer
 
-But ask me about distribution.
+But please ask me about distribution.
 
 ???
 
@@ -196,7 +238,7 @@ class: center, middle
 
 class: center, middle
 
-# Distributing your game
+# Publishing your game
 
 ???
 
@@ -212,8 +254,8 @@ class: center, middle
 
 ???
 
-So if you've used itch.io, you're probably family with many of these things.
-But sometimes hearings things you already know gives you new ideas for things
+So if you've used itch.io, you're probably familiar with many of these things.
+But sometimes hearing things you already know gives you new ideas for things
 to try in the future.
 
 ---
@@ -235,7 +277,7 @@ class: center, middle
 
 * Publishing == free
 * itch.io makes money through revenue share
-* Most games are free! (about 80% free, 20% paid)
+* Most games are free (about 80% free, 20% paid)
 
 ---
 
@@ -243,11 +285,11 @@ class: center, middle
 
 * Publishing == free
 * itch.io makes money through revenue share
-* Most games are free! (about 80% free, 20% paid)
+* Most games are free (about 80% free, 20% paid)
 * Everything is "Pay what you want"
   * Games for free can take donations
   * Premium games can get tips
-* Developers in control
+* Our philosophy is developers first
 
 ---
 
@@ -273,16 +315,16 @@ class: center, middle
 
 class: center, middle
 
-## Two kinds of project types
+## Two kinds of projects
 
 ---
 
 class: middle
 
-## Two kinds of project types (relevant to Godot)
+## Two kinds of projects (relevant to Godot)
 
 * Downloadable
-  * Linux, Windows, MacOS, Android, etc.
+  * Linux, Windows, MacOS, Android
 * HTML5
 
 ???
@@ -294,7 +336,7 @@ These correspond to the HTML, individual operating system export templates.
 
 ---
 
-class: center, middle
+class: middle
 
 # Briefly about mobile
 
@@ -326,8 +368,8 @@ high performance requirements. Games can be loaded directly into modern browser
 
 # HTML5 Games
 
-* Upload a `zip` file containing all your games resources.
-* We extract it, and put the `index.html` file in an `iframe`
+* Upload a `zip` file containing all your game's resources.
+* We extract it and put the `index.html` file in an `iframe`
 
 ---
 
@@ -343,9 +385,9 @@ class: center
 
 # HTML5 Games
 
-* Upload a `zip` file containing all your games resources.
-* We extract it, and put the `index.html` file in an `iframe`
-* Recommended: Export your game to new directory, name it `index`
+* Upload a `zip` file containing all your game's resources.
+* We extract it and put the `index.html` file in an `iframe`
+* **Recommended:** Export your game to new directory, name it `index`
 * Export it → Zip it → Upload it
   * Doesn't matter if `index.html` is nested
 
@@ -359,7 +401,7 @@ class: center
 
 # HTML5 Games: Viewport
 
-Test width & height is what your game's dimensions will be. Plug that into itch.io
+Test width & height are what your game's dimensions will be.<br>Plug them into itch.io.
 
 <img src="display-settings.png" alt="" />
 
@@ -367,16 +409,15 @@ Test width & height is what your game's dimensions will be. Plug that into itch.
 
 # HTML5 Games: Viewport
 
-* Test width & height is initial game dimensions
-* Recommended: Make your window resizable
+* Test width & height are initial game dimensions
+* **Recommended:** Make your window resizable
 * Use `OS.set_window_maximized` to make your game take up the available area
-
 
 ---
 
 # Maximize your game
 
-Use this script to maximize the game to the `iframe` after it loads.
+Use this script to maximize the game within the `iframe`
 
 ```gdscript
 func _ready():
@@ -388,7 +429,7 @@ func _ready():
 
 Source: https://github.com/godotengine/godot/issues/17161
 
-Plays well with itch.io's built in fullscreen button.
+👍 Works well with itch.io's built in fullscreen button
 
 ---
 
@@ -412,8 +453,8 @@ class: center, middle
 
 # Downloadable Games
 
-* Godot makes cross platform builds, take advantage of it
-  * We have strong Windows, Linux, and MacOS communities
+* Godot makes cross-platform builds simple, take advantage of it
+  * itch.io has strong Windows, Linux, and MacOS communities
 
 ---
 
@@ -429,10 +470,10 @@ Linux is beating out MacOS here, which is cool
 
 # Downloadable Games
 
-* Godot makes cross platform builds, take advantage of it
-  * We have strong Windows, Linux, and MacOS communities
-* Our app will figure out how to run your games
-  * Godot games are standalone so it works by default
+* Godot makes cross-platform builds simple, take advantage of it
+  * itch.io has strong Windows, Linux, and MacOS communities
+* Our app will figure out how to run your game
+  * Godot games are standalone, they will execute by default
 
 ---
 
@@ -457,10 +498,11 @@ More info: https://itch.io/docs/itch/integrating/manifest.html
 
 # Downloadable Games
 
-* Godot makes cross platform builds, take advantage of it
-  * We have strong Windows, Linux, and MacOS communities
-* Our app will figure out how to run your games
-  * Godot games are standalone so it works by default
+
+* Godot makes cross-platform builds simple, take advantage of it
+  * itch.io has strong Windows, Linux, and MacOS communities
+* Our app will figure out how to run your game
+  * Godot games are standalone, they will execute by default
 * You can customize launching with `.itch.toml`
 * Your manifest can specify prerequisites for Windows
   * Visual C++ Runtime, .NET Framework
@@ -469,11 +511,23 @@ More info: https://itch.io/docs/itch/integrating/manifest.html
 
 ---
 
+class: center, middle
+
+# itch.io API
+
+---
+
 # Downloadable Games: API access
 
+* API is HTTP based, in Godot you will use `HTTPClient` or `HTTPRequest`
+
+---
+
+# Downloadable Games: API access
+
+* API is HTTP based, in Godot you will use `HTTPClient` or `HTTPRequest`
 * Use the API to see who is playing your game
   * You can check that they own it, if you want DRM
-* API is HTTP based, in Godot you will use `HTTPClient` or `HTTPRequest`
 * Simple now, but will be more complex in the near future
 * Note: API keys timeout, make sure to renew them
 
@@ -607,6 +661,7 @@ class: center, middle
   * Featured games, fresh games
 * Browse (filter by tags, platforms, genres, etc.)
 * Collections, recommendations
+* The feed
 
 --
 
@@ -618,15 +673,54 @@ class: center, middle
 
 ---
 
-class: middle, center
-
 # Use your analytics
+
+* Use game analytics to find where your visitors are coming from
+* Discover communities talking about your game and engage with them
+* An `itch.io` referrer from another game means people are finding your game through cross-game recommendations
+
+---
+
+# Engage with community 
+
+* Encourage people to follow your account
+  * New projects you publish are emailed to your followers
+* Encourage people to add your game to a collection
+  * If your game goes on sale, they'll be notified
+* Message boards and comments can be added to your pages
+  * Using a message board? Add initial topics to prompt people to participate
+* YouTube streamers love to post video replies in comments
+* Use devlogs to re-engage with a game that is in development
+
+---
+
+# Classify your project
+
+* A lot of itch.io is optional, but that doesn't mean you shouldn't do it
+* Add tags, genre
+* Use tool classification
+* Add languages, accessibility, controller support, etc.
+* Add a demo for paid games
+
+---
+
+class: center, middle
+
+# The more you classify<br>the more you show up
+
+Browse pages account for 80% of<br> game impressions on all of itch.io
 
 ---
 
 class: middle, center
 
 # Classify your project
+
+<img src="platforms.gif" alt="" />
+
+---
+
+<img src="made_with_godot.png" width="100%" />
 
 ---
 
@@ -638,9 +732,56 @@ class: middle, center
 
 class: middle, center
 
+<img src="boring_page.png" alt="" width="100%" />
+
+---
+
+class: middle, center
+
+<img src="cool_1.png" alt="" width="100%" />
+
+---
+
+class: middle, center
+
+<img src="cool_2.png" alt="" width="100%" />
+
+---
+
+class: middle, center
+
+<img src="cool_3.png" alt="" width="100%" />
+
+---
+
+class: middle, center
+
+<img src="cool_4.png" alt="" width="100%" />
+
+---
+
+# Help us help you
+
+* We love to feature pages that show effort
+* Post on our community to announce your launch
+  * <https://itch.io/board/10022/release-announcements>
+* If you need help or advice, contact us
+
+---
+
+class: center
+
 # Other ways to get involved
 
 <img src="godot-jam.png" alt="" width="70%" />
+
+---
+
+class: center
+
+# Other ways to get involved
+
+<img src="godot_page.png" alt="" width="80%" />
 
 ---
 
