@@ -283,9 +283,6 @@ class: center, middle
 
 # At a glance
 
-* Publishing == free
-* itch.io makes money through revenue share
-* Most games are free (about 80% free, 20% paid)
 * Everything is "Pay what you want"
   * Games for free can take donations
   * Premium games can get tips
@@ -385,8 +382,6 @@ class: center
 
 # HTML5 Games
 
-* Upload a `zip` file containing all your game's resources.
-* We extract it and put the `index.html` file in an `iframe`
 * **Recommended:** Export your game to new directory, name it `index`
 * Export it → Zip it → Upload it
   * Doesn't matter if `index.html` is nested
@@ -470,10 +465,8 @@ Linux is beating out MacOS here, which is cool
 
 # Downloadable Games
 
-* Godot makes cross-platform builds simple, take advantage of it
-  * itch.io has strong Windows, Linux, and MacOS communities
 * Our app will figure out how to run your game
-  * Godot games are standalone, they will execute by default
+  * Godot games will run with no additional metadata
 
 ---
 
@@ -498,16 +491,9 @@ More info: https://itch.io/docs/itch/integrating/manifest.html
 
 # Downloadable Games
 
-
-* Godot makes cross-platform builds simple, take advantage of it
-  * itch.io has strong Windows, Linux, and MacOS communities
-* Our app will figure out how to run your game
-  * Godot games are standalone, they will execute by default
-* You can customize launching with `.itch.toml`
 * Your manifest can specify prerequisites for Windows
   * Visual C++ Runtime, .NET Framework
 * You can opt into the itch.io sandbox
-
 
 ---
 
@@ -525,11 +511,10 @@ class: center, middle
 
 # Downloadable Games: API access
 
-* API is HTTP based, in Godot you will use `HTTPClient` or `HTTPRequest`
 * Use the API to see who is playing your game
-  * You can check that they own it, if you want DRM
-* Simple now, but will be more complex in the near future
-* Note: API keys timeout, make sure to renew them
+  * You can check that they own it
+* It's simple now, but will be more complex in the near future
+* **Note:** API keys time out, make sure to renew them
 
 ---
 
@@ -579,11 +564,12 @@ func _ready():
 
   ## read the body...
 ```
+
 ---
 
 # Downloadable Games: API access
 
-* `HTTPRequest` node should work too
+* A `HTTPRequest` node should work too
 * TODO: We will write a library for you to use :)
 * HTML5 games launched through the app have slightly different interface
   * See the docs: <https://itch.io/docs/itch/integrating/manifest.html>
@@ -647,10 +633,10 @@ class: center, middle
 
 --
 
-## Take advantage of your audience
+## Your audience can be your biggest asset
 
 * If you have an audience, use it
-* If you don't have an audience, start making one
+* If you don't have an audience, start gathering one
   * Twitter, Reddit, Discord, Twitch, etc.
 
 ---
@@ -668,7 +654,7 @@ class: center, middle
 ## Sorting games
 
 * We sort games by a *popularity* metric
-* The first two weeks is when it's easy to rise.
+* The first two weeks are when it's easy to rise.
   * When you launch your game tell people about it!
 
 ---
@@ -696,7 +682,7 @@ class: center, middle
 
 # Classify your project
 
-* A lot of itch.io is optional, but that doesn't mean you shouldn't do it
+* A lot of itch.io is optional, but that doesn't mean you should ignore it
 * Add tags, genre
 * Use tool classification
 * Add languages, accessibility, controller support, etc.
